@@ -4,16 +4,53 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] private GameObject[] OnTileObjects;
+    [SerializeField] private float Speed;
+    [SerializeField] private float MaxZPos;
+    [SerializeField] private float ChanceToSpawnObject;
 
-    [SerializeField] private Vector3[] ObjectJoints;
+    [SerializeField] private GameObject[] OnTileObjects;
+    [SerializeField] private GameObject[] BorderDecorations;
+
+    [SerializeField] private Transform[] ObjectJoints;
+    [SerializeField] private Transform[] DecorationsPoints;
     private void Start()
     {
         AddOnTileObjects();
+        AddBorderDecorations();
+    }
+
+    private void Update()
+    {
+        transform.position += new Vector3(0, 0, Speed * Time.deltaTime);
+
+        if(transform.position.z >= MaxZPos)
+            Destroy(gameObject);
+    }
+
+    private void AddBorderDecorations()
+    {
+        foreach(Transform point in DecorationsPoints)
+        {
+            Instantiate(BorderDecorations[Random.Range(0, BorderDecorations.Length-1)], point.position, point.rotation).transform.SetParent(point);
+
+        }
     }
 
     private void AddOnTileObjects()
     {
+        foreach(Transform joint in ObjectJoints)
+        {
+            if(NeedSpawnObject())
+            {
+                Debug.Log(joint.name);
+                //GameObject objectToSpawn = OnTileObjects[Random.Range(0, OnTileObjects.Length - 1)];
+                //Instantiate(objectToSpawn, joint);
+            }
+        }
+    }
 
+    private bool NeedSpawnObject()
+    {
+        return Random.Range(0, 100) <= ChanceToSpawnObject;
     }
 }

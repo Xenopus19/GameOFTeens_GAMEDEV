@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class RoadCreator : MonoBehaviour
 {
-    [SerializeField] private Vector3 MinXPosForLastTileToSpawn;
-    [SerializeField] private Vector3 SpawnPos;
+    [SerializeField] private Transform SpawnPos;
 
     [SerializeField] private GameObject Tile;
 
@@ -33,6 +32,6 @@ public class RoadCreator : MonoBehaviour
 
     private void SpawnTile()
     {
-        Instantiate(Tile, SpawnPos, Quaternion.identity).transform.SetParent(tilesParent);
+        Instantiate(Tile, SpawnPos.position, Quaternion.identity).transform.SetParent(tilesParent);
     }
 }
