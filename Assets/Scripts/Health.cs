@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    private int currentHP;
-    private int maxHP;
-    public Health(int maxiHP)
+    public int currentHP;
+    public int maxHP;
+
+    private void Start()
     {
-        currentHP = maxiHP;
-        maxHP = maxiHP;
+        currentHP = maxHP;
     }
 
     public void AddHP(int amount)
