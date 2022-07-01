@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class Score : MonoBehaviour
 {
-    public static Score instance;
+    public static Score Instance;
     public Score()
     {
-        instance = this;
+        Instance = this;
     }
 
     public int score = 0;
