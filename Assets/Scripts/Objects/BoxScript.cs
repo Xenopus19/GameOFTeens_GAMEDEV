@@ -7,6 +7,6 @@ public class BoxScript : MonoBehaviour
     public int scoreAddAmount;
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player") Score.instance.AddScore(scoreAddAmount);
+        if (collision.gameObject.tag == "Player") Score.Instance.AddScore(scoreAddAmount);
     }
 }
