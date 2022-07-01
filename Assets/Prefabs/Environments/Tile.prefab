@@ -407,7 +407,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 20
-  MaxZPos: 150
+  MaxZPos: 80
   ChanceToSpawnObject: 30
   OnTileObjects: []
   BorderDecorations:
