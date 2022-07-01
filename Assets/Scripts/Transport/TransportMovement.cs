@@ -13,7 +13,6 @@ public class TransportMovement : MonoBehaviour
     private void Drive()
     {
         Vector3 direction = CalculateDirection();
-        print(direction);
         if ((direction.x >= 0 && transform.position.x <= m_BordersX.x) ||
             (direction.x <= 0 && transform.position.x >= m_BordersX.y))
             return;

@@ -17,6 +17,7 @@ public class Score : MonoBehaviour
     void Start()
     {
         scoreText = gameObject.GetComponent<Text>();
+        Level.LoadLevel();
         UpdateScoreText();
     }
 
@@ -32,6 +33,7 @@ public class Score : MonoBehaviour
     public void AddScore(int num)
     {
         score += num;
+        Level.CheckEndGame(score, num);
         UpdateScoreText();
     }
 

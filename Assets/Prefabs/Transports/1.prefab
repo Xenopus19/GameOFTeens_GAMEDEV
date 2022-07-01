@@ -7,6 +7,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3880284220046128950}
     m_Modifications:
+    - target: {fileID: 657342170832111499, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3457953577257978238, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5404171337045202180, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6515791259642291426, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8121985121802411140, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -54,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 8934234302468195902, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
       propertyPath: m_Name
       value: car_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8934234302468195902, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
@@ -188,6 +208,10 @@ PrefabInstance:
     - target: {fileID: 7138972651446333881, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
       propertyPath: m_Name
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7138972651446333881, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
