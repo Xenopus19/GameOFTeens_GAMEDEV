@@ -1,12 +1,22 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class BoxScript : MonoBehaviour
 {
-    public int scoreAddAmount;
+    [SerializeField] private int scoreAddAmount;
+    [SerializeField] private GameObject Effects;
+
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player") Score.Instance.AddScore(scoreAddAmount);
+        if (collision.gameObject.tag == "Player")
+        {
+            Score.Instance.AddScore(scoreAddAmount);
+            DestroyBox();
+        }
+    }
+
+    private void DestroyBox()
+    {
+        Instantiate(Effects, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }

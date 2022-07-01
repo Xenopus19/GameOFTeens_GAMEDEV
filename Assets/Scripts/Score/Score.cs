@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,7 +32,7 @@ public class Score : MonoBehaviour
     public void AddScore(int num)
     {
         score += num;
-        Level.CheckEndGame(score, num);
+        Level.IncreaseCaughtBoxAmount();
         UpdateScoreText();
     }
 

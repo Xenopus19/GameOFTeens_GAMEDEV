@@ -239,6 +239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreAddAmount: 50
+  Effects: {fileID: 5035815851845730065, guid: f5aa090ad22c37a48ae60b1c66407aaf, type: 3}
 --- !u!54 &232959188013925060
 Rigidbody:
   m_ObjectHideFlags: 0

@@ -63,6 +63,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5082294329391897730, guid: aa71d9df118fc154a858babad5b1a66f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5352112619491041860, guid: aa71d9df118fc154a858babad5b1a66f, type: 3}
       propertyPath: m_Name
       value: bus_1_yellow

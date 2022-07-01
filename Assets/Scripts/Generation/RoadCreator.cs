@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,7 +28,14 @@ public class RoadCreator : MonoBehaviour
         if (tilesParent.childCount<StandartTilesAmount)
         {
             SpawnTile();
+            if (Level.IsEndGame())
+                EndGame();
         }
+    }
+
+    private void EndGame()
+    {
+        throw new NotImplementedException();
     }
 
     private void SpawnTile()

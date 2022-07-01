@@ -1,21 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!54 &8600362826648329428
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7679938459034423736}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &5207729243355378542
 GameObject:
   m_ObjectHideFlags: 0
@@ -4795,11 +4779,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
---- !u!1 &7679938459034423736 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8934234302468195902, guid: 40b5728c9a8fc364cbfbaadcdeb1af64, type: 3}
-  m_PrefabInstance: {fileID: 1254350995142580102}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1254350995550345845
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4876,6 +4855,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2628343803213047899, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_BordersX.x
+      value: -16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2628343803213047899, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_BordersX.y
+      value: 16
+      objectReference: {fileID: 0}
     - target: {fileID: 3195573420576270026, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
       propertyPath: m_RootOrder
       value: 0
