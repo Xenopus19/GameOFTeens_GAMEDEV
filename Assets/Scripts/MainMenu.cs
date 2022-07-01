@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -7,7 +5,7 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    [Header("Menu")]
+    [Header("Menus")]
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject shopMenu;
     [SerializeField] private GameObject helpMenu;
@@ -23,10 +21,17 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Level");
     }
 
-    public void GoShop()
+    public void GoTo(GameObject to)
     {
+        CloseAll();
+        to.SetActive(true);
+    }
+
+    public void CloseAll()
+    {
+        helpMenu.SetActive(false);
+        shopMenu.SetActive(false);
         mainMenu.SetActive(false);
-        shopMenu.SetActive(true);
     }
 
     public void ToggleSound()
@@ -40,18 +45,5 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("Quit");
         Application.Quit();
-    }
-
-    public void Help()
-    {
-        mainMenu.SetActive(false);
-        helpMenu.SetActive(true);
-    }
-
-    public void Back()
-    {
-        helpMenu.SetActive(false);
-        shopMenu.SetActive(false);
-        mainMenu.SetActive(true);
     }
 }
