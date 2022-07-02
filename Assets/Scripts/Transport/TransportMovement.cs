@@ -13,7 +13,8 @@ public class TransportMovement : MonoBehaviour
     private void Start()
     {
         ControlsFreezed = false;
-        Level.OnLevelFinished += FreezeControlsMoveCamera;    }
+        Level.OnLevelFinished += FreezeControlsMoveCamera;    
+    }
 
 
     void Update()
