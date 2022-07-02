@@ -10,9 +10,10 @@ public class Money : MonoBehaviour
         Level.OnLevelFinished += IncreaseByScore;
     }
 
-    private void LoadMoney()
+    public static int LoadMoney()
     {
         Coins = PlayerPrefs.HasKey("Money") ? PlayerPrefs.GetInt("Money") : 0;
+        return Coins;
     }
 
     public void IncreaseByScore()
@@ -24,7 +25,6 @@ public class Money : MonoBehaviour
     private static void SaveMoney()
     {
         PlayerPrefs.SetInt("Money", Coins);
-        print (Coins);
     }
 
     private static void SpentMoney(int purchase)
@@ -33,7 +33,7 @@ public class Money : MonoBehaviour
         SaveMoney();
     }
 
-    public void IncreaseMoney(int toAdd)
+    public static void IncreaseMoney(int toAdd)
     {
         Coins += toAdd;
         SaveMoney();
