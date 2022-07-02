@@ -8,17 +8,17 @@ public class ProgressBar : MonoBehaviour
     void Start()
     {
         bar = GetComponent<Slider>();
-        Level.OnBoxAmountChanged += UpdateProgress;
-        UpdateProgress(0);
+        bar.value = 0;
     }
 
-    private void UpdateProgress(float filled)
+    private void Update()
     {
-        bar.value = (filled);
+        Level.time += Time.deltaTime;
+        UpdateProgress();
     }
 
-    private void OnDestroy()
+    private void UpdateProgress()
     {
-        Level.OnBoxAmountChanged -= UpdateProgress;
+        bar.value = Level.time / Level.levelTime;
     }
 }

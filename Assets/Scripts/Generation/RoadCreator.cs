@@ -37,6 +37,7 @@ public class RoadCreator : MonoBehaviour
     private void EndGame()
     {
         Tile = FinishTile;
+        print(Tile);
     }
 
     private void SpawnTile()
