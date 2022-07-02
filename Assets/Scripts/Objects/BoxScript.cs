@@ -16,7 +16,7 @@ public class BoxScript : MonoBehaviour
 
     private void DestroyBox()
     {
-        Instantiate(Effects, transform.position, Quaternion.identity);
+        Instantiate(Effects, transform.position, Quaternion.identity, transform.parent);
         Destroy(gameObject);
     }
 }

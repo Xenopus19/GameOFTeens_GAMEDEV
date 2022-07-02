@@ -7,6 +7,6 @@ public class SavingTransport : MonoBehaviour
     void Awake()
     {
         TransportIndex = PlayerPrefs.HasKey("Transport") ? PlayerPrefs.GetInt("Transport") - 1 : 0;
-        gameObject.transform.GetChild(TransportIndex).gameObject.SetActive(true);
+        transform.GetChild(TransportIndex).gameObject.SetActive(true);
     }
 }
