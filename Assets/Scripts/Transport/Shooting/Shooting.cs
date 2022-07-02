@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    [SerializeField] Animation TurretAnimation;
+    [SerializeField] private Animation TurretAnimation;
+    [SerializeField] private AudioSource TurretShootingSound;
 
     [SerializeField] Transform ShootingPoint;
     [SerializeField] private GameObject Bullet;
@@ -31,6 +32,7 @@ public class Shooting : MonoBehaviour
     {
         PassedCooldown = 0;
 
+        TurretShootingSound.Play();
         TurretAnimation.Play();
         Instantiate(Bullet, ShootingPoint.position, Quaternion.Inverse(ShootingPoint.rotation));
     }
