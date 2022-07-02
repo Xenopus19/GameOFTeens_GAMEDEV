@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 
@@ -5,12 +6,22 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private float Damage;
     [SerializeField] private float SeconsToShoot;
+    [SerializeField] private GameObject Effects;
 
     private Shooting shooting;
+    private Health health;
 
     void Start()
     {
         shooting = GetComponent<Shooting>();
+        health = GetComponent<Health>();
+        StartCoroutine(Shoot());
+    }
+
+    private IEnumerator Shoot()
+    {
+        yield return new WaitForSeconds(SeconsToShoot);
+        shooting.Shoot();
         StartCoroutine(Shoot());
     }
 
@@ -19,13 +30,13 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Health>().RemoveHP(Damage);
+            DestroyEnemy();
         }
     }
 
-    private IEnumerator Shoot()
+    private void DestroyEnemy()
     {
-        yield return new WaitForSeconds(SeconsToShoot);
-        shooting.Shoot();
-        StartCoroutine(Shoot());
+        Instantiate(Effects, transform.position, Quaternion.identity, transform.parent);
+        Destroy(gameObject);
     }
 }

@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     public GameObject Shooter;
 
     [SerializeField] private int Damage;
+    [SerializeField] private GameObject Effects;
+
     private void Update()
     {
         transform.position += transform.forward * Speed * Time.deltaTime;
@@ -15,7 +17,7 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (Shooter.GetComponent<Enemy>() == Shooter.GetComponent<Enemy>())
+        if (Shooter.GetComponent<Enemy>() == collision.gameObject.GetComponent<Enemy>())
             return;
 
         Health health = collision.gameObject.GetComponent<Health>();
@@ -23,5 +25,14 @@ public class Bullet : MonoBehaviour
         if (health == null) return;
 
         health.RemoveHP(Damage);
+
+        if (collision.gameObject.tag == "Player")
+            DestroyBullet();
+    }
+
+    private void DestroyBullet()
+    {
+        Instantiate(Effects, transform.position, Quaternion.identity, transform.parent);
+        Destroy(gameObject);
     }
 }
