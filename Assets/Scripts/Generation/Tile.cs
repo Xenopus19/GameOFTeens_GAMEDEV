@@ -13,6 +13,9 @@ public class Tile : MonoBehaviour
 
     [SerializeField] private Transform[] ObjectJoints;
     [SerializeField] private Transform[] DecorationsPoints;
+
+    [SerializeField] private bool spawnLoot;
+
     private void Start()
     {
         AddOnTileObjects();
@@ -36,10 +39,12 @@ public class Tile : MonoBehaviour
     }
 
     private void AddOnTileObjects()
-    {
-        if(OnTileObjects.Length == 0) return;
+    { 
+        if (!spawnLoot) return;
 
-        foreach(Transform joint in ObjectJoints)
+        if (OnTileObjects.Length == 0) return;
+
+        foreach (Transform joint in ObjectJoints)
         {
             if(NeedSpawnObject())
             {

@@ -35,7 +35,7 @@ public class RoadCreator : MonoBehaviour
 
     private void EndGame()
     {
-        throw new NotImplementedException();
+       // throw new NotImplementedException();
     }
 
     private void SpawnTile()

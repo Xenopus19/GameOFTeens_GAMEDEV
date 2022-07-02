@@ -15,8 +15,15 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Sprite defaultSprite;
     [SerializeField] private Sprite pressedSprite;
     private bool isOn = true;
+    [SerializeField] private Animator animator;
 
-    public void PlayGame()
+    public void Play()
+    {
+        animator.SetBool("isPlay", true);
+        mainMenu.SetActive(false);
+    }
+
+    public void LoadScene()
     {
         SceneManager.LoadScene("Level");
     }
