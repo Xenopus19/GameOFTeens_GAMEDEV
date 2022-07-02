@@ -5,6 +5,10 @@ using System.Collections;
 public class BoxScript : MonoBehaviour
 {
     public static int scoreAddAmount = 25;
+
+    [SerializeField] private float chanceToHP;
+    [SerializeField] private float hpAmount;
+    
     [SerializeField] private GameObject Effects;
 
     [SerializeField] private AudioSource audioSource;
@@ -14,7 +18,11 @@ public class BoxScript : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Score.Instance.AddScore(scoreAddAmount);
-            StartCoroutine(nameof(DestroyBox));
+            float random = Random.value;
+            if (random <= chanceToHP)
+                collision.gameObject.GetComponent<Health>().AddHP(hpAmount);
+            Level.boxAmount++;
+            StartCoroutine(DestroyBox());
         }
     }
 

@@ -240,7 +240,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d34cae08e8ba9478d6d9d3d6429a17, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scoreAddAmount: 50
+  chanceToHP: 0.25
+  hpAmount: 7
   Effects: {fileID: 168542, guid: 5702e2a6fea804b45b49b70d8feaf7ae, type: 3}
   audioSource: {fileID: -5532208190074484285}
   destroyAnim: {fileID: 4453091886523805313}

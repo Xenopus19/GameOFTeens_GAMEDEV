@@ -7,6 +7,8 @@ public class Level
     public static float levelTime;
     public static float time;
 
+    public static int boxAmount;
+
     public static Action OnLevelFinished;
 
     public static void LoadLevel()
