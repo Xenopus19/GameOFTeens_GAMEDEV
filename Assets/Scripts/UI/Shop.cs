@@ -14,8 +14,7 @@ public class Shop : MonoBehaviour
     {
         currentIndex = SavingTransport.TransportIndex;
         buttons[currentIndex].gameObject.SetActive(true);
-        moneyText.text = Money.LoadMoney().ToString();
-       
+        moneyText.text = Money.LoadMoney().ToString();       
     }
 
     private void Update()
@@ -48,10 +47,12 @@ public class Shop : MonoBehaviour
         if (!shopItems[newIndex].isBought)
             buttons[newIndex].gameObject.SetActive(true);
 
-        if (shopItems[newIndex])
+        if (shopItems[newIndex].isBought)
             SavingTransport.SaveTransport(newIndex);
 
         currentIndex += direction;
+
+        Debug.Log(shopItems[newIndex].isBought);
     }
 
     private void CloseAll()
