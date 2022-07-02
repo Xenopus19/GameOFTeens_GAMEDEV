@@ -16,8 +16,13 @@ public class Level
         levelTime = level * 20;
     }
 
-    internal static bool IsEndGame()
+    public static bool IsEndGame()
     {
         return time >= levelTime;
+    }
+
+    public static void SaveLevel()
+    {
+        PlayerPrefs.SetInt("Level", level + 1);
     }
 }

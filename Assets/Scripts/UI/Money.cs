@@ -22,12 +22,12 @@ public class Money : MonoBehaviour
         SaveMoney();
     }
 
-    private static void SaveMoney()
+    public static void SaveMoney()
     {
         PlayerPrefs.SetInt("Money", Coins);
     }
 
-    private static void SpentMoney(int purchase)
+    public static void SpentMoney(int purchase)
     {
         Coins -= purchase;
         SaveMoney();
