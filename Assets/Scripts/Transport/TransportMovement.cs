@@ -6,6 +6,7 @@ public class TransportMovement : MonoBehaviour
     [SerializeField] private Vector2 m_BordersX;
 
     [SerializeField] private Animation CameraFinishAnimation;
+    [SerializeField] private Animation JiggleAnimation;
 
     private bool ControlsFreezed;
 
@@ -45,6 +46,7 @@ public class TransportMovement : MonoBehaviour
     {
         ControlsFreezed = true;
         CameraFinishAnimation.Play();
+        JiggleAnimation.Stop();
     }
 
     private void OnDestroy() => Level.OnLevelFinished -= FreezeControlsMoveCamera;

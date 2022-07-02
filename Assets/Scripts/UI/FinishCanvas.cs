@@ -10,19 +10,23 @@ public class FinishCanvas : MonoBehaviour
         StartCoroutine(nameof(InitStars));
     }
 
-    private IEnumerable InitStars()
+    private IEnumerator InitStars()
     {
+        Debug.Log("Stars activated");
         int score = Score.Instance.score;
 
-        if(score < Level.levelBoxes * 100) stars[0].SetActive(true);
+        if(score < Level.levelBoxes * 100) 
+            stars[0].SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
 
-        if (score >= Level.levelBoxes * 100 + 25*5) stars[1].SetActive(true);
+        if (score >= Level.levelBoxes * 100 + 25*5) 
+            stars[1].SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
 
-        if (score >= Level.levelBoxes * 100 + 25 * 10) stars[2].SetActive(true);
+        if (score >= Level.levelBoxes * 100 + 25 * 10) 
+            stars[2].SetActive(true);
 
     }
 }

@@ -5047,6 +5047,7 @@ MonoBehaviour:
   m_MovementSpeed: 1
   m_BordersX: {x: -16, y: 16}
   CameraFinishAnimation: {fileID: 4559217803481618422}
+  JiggleAnimation: {fileID: 2805574704571527900}
 --- !u!114 &2935295761217092635
 MonoBehaviour:
   m_ObjectHideFlags: 0
