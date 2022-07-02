@@ -5,11 +5,7 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    [Header("Menus")]
-    [SerializeField] private GameObject mainMenu;
-    [SerializeField] private GameObject shopMenu;
-    [SerializeField] private GameObject helpMenu;
-    [Space(10)]
+
     [SerializeField] private AudioMixer mixer;
     [SerializeField] private GameObject toggleIcon;
     [SerializeField] private Sprite defaultSprite;
@@ -20,25 +16,22 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         animator.SetBool("isPlay", true);
-        mainMenu.SetActive(false);
     }
 
-    public void LoadScene()
+    public void GoShop()
     {
-        SceneManager.LoadScene("Level");
+        animator.SetBool("isShop", true);
     }
 
-    public void GoTo(GameObject to)
+    public void Help()
     {
-        CloseAll();
-        to.SetActive(true);
+        animator.SetBool("isHelp", true);    
     }
 
-    public void CloseAll()
+    public void Back()
     {
-        helpMenu.SetActive(false);
-        shopMenu.SetActive(false);
-        mainMenu.SetActive(false);
+        animator.SetBool("isHelp", false);
+        animator.SetBool("isShop", false);       
     }
 
     public void ToggleSound()
