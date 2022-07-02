@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
 
     private Shooting shooting;
 
+    public static int EnemyReward = 50;
+
     void Start()
     {
         shooting = GetComponent<Shooting>();

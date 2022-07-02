@@ -4,7 +4,7 @@ using System.Collections;
 
 public class BoxScript : MonoBehaviour
 {
-    [SerializeField] private int scoreAddAmount;
+    public static int scoreAddAmount = 25;
     [SerializeField] private GameObject Effects;
 
     [SerializeField] private AudioSource audioSource;
