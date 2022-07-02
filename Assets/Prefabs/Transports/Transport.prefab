@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 5744973795487155889}
   - component: {fileID: 7567572455707624776}
   - component: {fileID: 6640119850783252969}
+  - component: {fileID: 4559217803481618422}
   m_Layer: 0
   m_Name: TransportCamera
   m_TagString: MainCamera
@@ -131,6 +132,22 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3281682334216224387}
   m_Enabled: 1
+--- !u!111 &4559217803481618422
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3281682334216224387}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: da3fa743b2d73e04786dcb723868dc90, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: da3fa743b2d73e04786dcb723868dc90, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &4827039165732636758
 GameObject:
   m_ObjectHideFlags: 0
@@ -5028,6 +5045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSpeed: 1
   m_BordersX: {x: -16, y: 16}
+  CameraFinishAnimation: {fileID: 4559217803481618422}
 --- !u!114 &2935295761217092635
 MonoBehaviour:
   m_ObjectHideFlags: 0

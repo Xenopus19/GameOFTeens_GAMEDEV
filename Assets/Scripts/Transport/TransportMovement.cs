@@ -5,8 +5,20 @@ public class TransportMovement : MonoBehaviour
     [SerializeField] private float m_MovementSpeed = 0.1f;
     [SerializeField] private Vector2 m_BordersX;
 
+    [SerializeField] private Animation CameraFinishAnimation;
+
+    private bool ControlsFreezed;
+
+    private void Start()
+    {
+        ControlsFreezed = false;
+        Level.OnLevelFinished += FreezeControlsMoveCamera;    }
+
+
     void Update()
     {
+        if (ControlsFreezed) return;
+
         Drive();
     }
 
@@ -28,4 +40,12 @@ public class TransportMovement : MonoBehaviour
         
         return new Vector3(mousePos3D.x - transform.position.x, 0, 0);
     }
+
+    private void FreezeControlsMoveCamera()
+    {
+        ControlsFreezed = true;
+        CameraFinishAnimation.Play();
+    }
+
+    private void OnDestroy() => Level.OnLevelFinished -= FreezeControlsMoveCamera;
 }

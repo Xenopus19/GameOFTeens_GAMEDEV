@@ -3,12 +3,14 @@ using UnityEngine;
 
 public class Level 
 {
+    public static float levelBoxes;
+
     private static int level;
-    private static float levelBoxes;
     private static float caughtBoxes;
     private static float allBoxes;
 
     public static Action<float> OnBoxAmountChanged;
+    public static Action OnLevelFinished;
 
     public static void LoadLevel()
     {
