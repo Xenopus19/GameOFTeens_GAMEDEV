@@ -22,7 +22,7 @@ public class Level
 
     private static void SetBoxesAmount()
     {
-        levelBoxes = level * 30;
+        levelBoxes = level * 10;
     }
 
     public static void IncreaseCaughtBoxAmount()

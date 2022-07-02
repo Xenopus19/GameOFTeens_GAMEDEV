@@ -9,12 +9,10 @@ public class Enemy : MonoBehaviour
     [SerializeField] private GameObject Effects;
 
     private Shooting shooting;
-    private Health health;
 
     void Start()
     {
         shooting = GetComponent<Shooting>();
-        health = GetComponent<Health>();
         StartCoroutine(Shoot());
     }
 
