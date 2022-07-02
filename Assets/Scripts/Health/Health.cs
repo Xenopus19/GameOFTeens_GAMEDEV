@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-    public int currentHP;
-    public int maxHP;
+    public float currentHP;
+    public float maxHP;
 
-    public static Action<float> OnHPChanged;
+    public Action<float> OnHPChanged;
 
     private void Start()
     {
@@ -16,14 +16,14 @@ public class Health : MonoBehaviour
         UpdateHP();
     }
 
-    public void AddHP(int amount)
+    public void AddHP(float amount)
     {
         currentHP += amount;
         if (currentHP > maxHP) currentHP = maxHP;
         UpdateHP();
     }
 
-    public void RemoveHP(int amount)
+    public void RemoveHP(float amount)
     {
         currentHP -= amount;
         UpdateHP();

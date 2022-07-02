@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHealthUI : HealthUI
 {
     private Slider bar;
+    private Health health;
 
     void Start()
     {
         bar = GetComponent<Slider>();
-        Health.OnHPChanged += UpdateProgress;
+        health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
+        health.OnHPChanged += UpdateProgress;
         UpdateProgress(1);
     }
 
@@ -21,6 +21,6 @@ public class PlayerHealthUI : HealthUI
 
     private void OnDestroy()
     {
-        Health.OnHPChanged -= UpdateProgress;
+        health.OnHPChanged -= UpdateProgress;
     }
 }
