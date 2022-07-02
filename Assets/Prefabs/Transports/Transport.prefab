@@ -171,6 +171,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3195573420576270026}
   - component: {fileID: 2628343803213047899}
+  - component: {fileID: 7471544458710427320}
   m_Layer: 0
   m_Name: Transport
   m_TagString: Untagged
@@ -208,3 +209,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MovementSpeed: 1
   m_BordersX: {x: -16, y: 16}
+--- !u!114 &7471544458710427320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7138972651446333881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b684e7c90dcc644915576c7cccce97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  maxHP: 100
