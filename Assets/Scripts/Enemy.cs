@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.transform.parent.GetComponentInParent<Health>().RemoveHP(Damage);
+            collision.gameObject.GetComponent<Health>().RemoveHP(Damage);
         }
     }
 }

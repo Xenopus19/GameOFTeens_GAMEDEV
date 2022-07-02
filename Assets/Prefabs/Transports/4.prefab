@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &7233672840300527743
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3032750960697089585}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.8238814, y: 2.316019, z: 6.0329227}
-  m_Center: {x: -0.016140372, y: -4.3888283, z: 5.606638}
 --- !u!1001 &1958852135500133011
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -106,6 +93,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9359663
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.9576454
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Size.z
+      value: 5.9115195
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Center.x
+      value: -0.11894703
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Center.y
+      value: 1.2612498
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Center.z
+      value: -0.055413485
+      objectReference: {fileID: 0}
     - target: {fileID: 678889714008601465, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
       propertyPath: m_TagString
       value: Player
@@ -208,11 +219,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
---- !u!1 &3032750960697089585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 678889714008601465, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
-  m_PrefabInstance: {fileID: 2557367801051688264}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6421254119566170346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8818462511464740258, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
