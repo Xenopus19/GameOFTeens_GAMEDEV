@@ -32,12 +32,13 @@ public class Tile : MonoBehaviour
         foreach(Transform point in DecorationsPoints)
         {
             Instantiate(BorderDecorations[Random.Range(0, BorderDecorations.Length-1)], point.position, point.rotation).transform.SetParent(point);
-
         }
     }
 
     private void AddOnTileObjects()
     {
+        if(OnTileObjects.Length == 0) return;
+
         foreach(Transform joint in ObjectJoints)
         {
             if(NeedSpawnObject())

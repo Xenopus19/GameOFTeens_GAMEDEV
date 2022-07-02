@@ -3,18 +3,18 @@ using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
 {
-    private Image image;
+    private Slider bar;
 
     void Start()
     {
-        image = GetComponent<Image>();
+        bar = GetComponent<Slider>();
         Level.OnBoxAmountChanged += UpdateProgress;
         UpdateProgress(0);
     }
 
     private void UpdateProgress(float filled)
     {
-        image.fillAmount = (filled);
+        bar.value = (filled);
     }
 
     private void OnDestroy()
