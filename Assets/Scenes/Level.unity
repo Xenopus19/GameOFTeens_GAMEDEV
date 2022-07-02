@@ -529,6 +529,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5264157575632704734, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0b5d1a66ad104ef408da1522f3e013f3, type: 2}
     - target: {fileID: 7625835527949175829, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_FontData.m_Font
       value: 
@@ -1566,6 +1570,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 0dbe2c7f3b06b1e43bd3ee92545146f1, type: 3}
+    - target: {fileID: 4569815661585118923, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0b5d1a66ad104ef408da1522f3e013f3, type: 2}
     - target: {fileID: 6378460953950670282, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: m_IsActive
       value: 0
