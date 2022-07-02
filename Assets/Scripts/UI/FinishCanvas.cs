@@ -13,8 +13,8 @@ public class FinishCanvas : MonoBehaviour
     private IEnumerator InitStars()
     {
         int score = Score.Instance.score;
-        float scoreForStar = Level.boxAmount / 4 * BoxScript.scoreAddAmount;
-        if (score < scoreForStar) 
+        float scoreForStar = (Level.boxAmount / 4) * BoxScript.scoreAddAmount;
+        if (score >= scoreForStar) 
             stars[0].SetActive(true);
 
         yield return new WaitForSeconds(0.5f);
@@ -24,7 +24,7 @@ public class FinishCanvas : MonoBehaviour
 
         yield return new WaitForSeconds(0.5f);
 
-        if (score >= scoreForStar + Enemy.EnemyReward * Level.level * 2)
+        if (score >= scoreForStar + Enemy.EnemyReward * Level.level * 1.5)
             stars[2].SetActive(true);
 
     }
