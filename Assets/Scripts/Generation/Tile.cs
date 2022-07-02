@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Tile : MonoBehaviour
@@ -48,7 +46,7 @@ public class Tile : MonoBehaviour
         {
             if(NeedSpawnObject())
             {
-                GameObject objectToSpawn = OnTileObjects[Random.Range(0, OnTileObjects.Length - 1)];
+                GameObject objectToSpawn = OnTileObjects[Random.Range(0, OnTileObjects.Length)];
                 Level.IncreaseAllBoxAmount(objectToSpawn);
                 Instantiate(objectToSpawn, joint);
             }
