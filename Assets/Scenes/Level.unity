@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -521,10 +521,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: GoToMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2949188529073050722, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 0dbe2c7f3b06b1e43bd3ee92545146f1, type: 3}
     - target: {fileID: 5132537020938461568, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 7625835527949175829, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
+      propertyPath: m_FontData.m_Font
+      value: 
+      objectReference: {fileID: 12800000, guid: 0dbe2c7f3b06b1e43bd3ee92545146f1, type: 3}
     - target: {fileID: 9177248966807193737, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_Name
       value: DieCanvas
