@@ -497,7 +497,7 @@ GameObject:
   - component: {fileID: 3070930829763914058}
   - component: {fileID: 6937932421338710443}
   m_Layer: 0
-  m_Name: Tile
+  m_Name: TileWithNoLoot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -563,7 +563,6 @@ MonoBehaviour:
   - {fileID: 7500888834571657691}
   - {fileID: 3157027809337195277}
   - {fileID: 2577031386107865538}
-  spawnLoot: 1
 --- !u!65 &3070930829763914058
 BoxCollider:
   m_ObjectHideFlags: 0
