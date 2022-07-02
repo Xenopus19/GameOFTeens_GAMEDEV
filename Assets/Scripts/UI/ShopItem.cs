@@ -37,7 +37,6 @@ public class ShopItem : MonoBehaviour
         }
 
         PlayerPrefs.SetInt($"IsBought{number}", isBought ? 0 : 1);
-        Debug.Log(isBought);
 
         priceText.text = "PRICE: " + price.ToString();
     }
