@@ -10,6 +10,7 @@ public class Health : MonoBehaviour
     public float maxHP;
 
     public Action<float> OnHPChanged;
+    public Action OnDie;
 
     private void Start()
     {
@@ -29,7 +30,18 @@ public class Health : MonoBehaviour
         currentHP -= amount;
         if(GotDamageAudio != null) GotDamageAudio.Play();
         UpdateHP();
-        //if (currentHP <= 0) ;
+        if (currentHP <= 0 && tag == "Player") PlayerDie();
+        if (currentHP <= 0 && tag != "Player") EnemyDie();
+    }
+
+    private void PlayerDie()
+    {
+        OnDie?.Invoke();
+    }
+
+    private void EnemyDie()
+    {
+        Destroy(gameObject);
     }
 
     private void UpdateHP()
