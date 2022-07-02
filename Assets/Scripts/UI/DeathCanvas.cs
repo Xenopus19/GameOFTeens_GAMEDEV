@@ -1,8 +1,12 @@
 using UnityEngine;
 
-public class DieCanvas : MonoBehaviour
+public class DeathCanvas : MonoBehaviour
 {
+    [SerializeField] private GameObject deathCanvas;
+    [SerializeField] private GameObject Road;
+    [SerializeField] private GameObject CarMusic;
     private PlayerDeath death;
+
     void Start()
     {
         death = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDeath>();
@@ -11,7 +15,9 @@ public class DieCanvas : MonoBehaviour
 
     private void ActivateDieCanvas()
     {
-        gameObject.SetActive(true);
+        deathCanvas.SetActive(true);
+        Road.SetActive(false);
+        CarMusic.SetActive(false);
     }
 
     private void OnDestroy()
