@@ -1,6 +1,4 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Health : MonoBehaviour
@@ -30,22 +28,22 @@ public class Health : MonoBehaviour
         currentHP -= amount;
         if(GotDamageAudio != null) GotDamageAudio.Play();
         UpdateHP();
-        if (currentHP <= 0 && tag == "Player") PlayerDie();
-        if (currentHP <= 0 && tag != "Player") EnemyDie();
+        if (currentHP <= 0) 
+            Die();
     }
 
-    private void PlayerDie()
+    private void Die()
     {
-        OnDie?.Invoke();
-    }
-
-    private void EnemyDie()
-    {
-        Destroy(gameObject);
+        gameObject.GetComponent<IDieable>().Die();
     }
 
     private void UpdateHP()
     { 
         OnHPChanged?.Invoke(currentHP / maxHP);
     }
+}
+
+public interface IDieable
+{
+    void Die();
 }

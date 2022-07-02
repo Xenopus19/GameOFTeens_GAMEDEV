@@ -5008,6 +5008,7 @@ GameObject:
   - component: {fileID: 8240061813956062263}
   - component: {fileID: -3882153064436147827}
   - component: {fileID: 7486309226063250452}
+  - component: {fileID: -1448314399080430465}
   m_Layer: 0
   m_Name: Transport
   m_TagString: Player
@@ -5191,6 +5192,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-1448314399080430465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7138972651446333881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8bd20f29ecb964488fe43535578abd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Effects: {fileID: 0}
 --- !u!1 &8376023797427188837
 GameObject:
   m_ObjectHideFlags: 0
