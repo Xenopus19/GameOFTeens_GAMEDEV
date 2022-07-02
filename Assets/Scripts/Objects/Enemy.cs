@@ -1,4 +1,3 @@
-using System;
 using System.Collections;
 using UnityEngine;
 
@@ -40,6 +39,7 @@ public class Enemy : MonoBehaviour, IDieable
 
     public void Die()
     {
+        Score.Instance.score += EnemyReward;
         Instantiate(Effects, transform.position, Quaternion.identity, transform.parent);
         Destroy(gameObject);
     }
