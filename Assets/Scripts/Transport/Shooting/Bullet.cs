@@ -5,6 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public float Speed;
+    public GameObject Shooter;
+
     [SerializeField] private int Damage;
     private void Update()
     {
@@ -13,6 +15,9 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (Shooter.GetComponent<Enemy>() == Shooter.GetComponent<Enemy>())
+            return;
+
         Health health = collision.gameObject.GetComponent<Health>();
 
         if (health == null) return;

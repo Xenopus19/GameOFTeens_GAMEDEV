@@ -34,8 +34,10 @@ public class Shooting : MonoBehaviour
         PassedCooldown = 0;
 
         TurretAnimation.Play();
-        GameObject bullet = Instantiate(Bullet, ShootingPoint.position, Quaternion.Inverse(ShootingPoint.rotation));
+        Bullet bullet = Instantiate(Bullet, ShootingPoint.position,
+                                    Quaternion.Inverse(ShootingPoint.rotation)).GetComponent<Bullet>();
         if (!IsPlayer)
-            bullet.GetComponent<Bullet>().Speed *= 2;
+            bullet.Speed *= 2;
+        bullet.Shooter = gameObject;
     }
 }

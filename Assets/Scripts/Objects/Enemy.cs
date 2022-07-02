@@ -24,7 +24,8 @@ public class Enemy : MonoBehaviour
 
     private IEnumerator Shoot()
     {
-        shooting.Shoot();
         yield return new WaitForSeconds(SeconsToShoot);
+        shooting.Shoot();
+        StartCoroutine(Shoot());
     }
 }

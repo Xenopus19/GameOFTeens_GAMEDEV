@@ -212,6 +212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Damage: 20
+  SeconsToShoot: 5
 --- !u!114 &9123607843282245232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +243,7 @@ MonoBehaviour:
   ShootingPoint: {fileID: 5747800305497292013}
   Bullet: {fileID: 5192495889844897908, guid: 1a20652841169424393657c58ce8a310, type: 3}
   Cooldown: 0
+  IsPlayer: 0
 --- !u!1 &3552678881205765284
 GameObject:
   m_ObjectHideFlags: 0
