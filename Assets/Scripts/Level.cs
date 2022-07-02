@@ -12,6 +12,8 @@ public class Level
     public static Action<float> OnBoxAmountChanged;
     public static Action OnLevelFinished;
 
+
+
     public static void LoadLevel()
     {
         level = PlayerPrefs.HasKey("Level") ? PlayerPrefs.GetInt("Level") : 1;

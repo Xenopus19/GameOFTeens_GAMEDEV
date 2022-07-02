@@ -7,6 +7,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.8475885
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.2290665
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Size.z
+      value: 4.417164
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0747582
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.89696056
+      objectReference: {fileID: 0}
+    - target: {fileID: -3882153064436147827, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_Center.z
+      value: 0.037593365
+      objectReference: {fileID: 0}
+    - target: {fileID: 678889714008601465, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 920765073311362426, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.511
@@ -85,7 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7138972651446333881, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
@@ -222,6 +250,14 @@ PrefabInstance:
     - target: {fileID: 4976349479628128930, guid: 788f99c0acce4384a91a6c213fb34068, type: 3}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976349479628128931, guid: 788f99c0acce4384a91a6c213fb34068, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4976349479628128932, guid: 788f99c0acce4384a91a6c213fb34068, type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5285174987729393547, guid: 788f99c0acce4384a91a6c213fb34068, type: 3}
       propertyPath: m_Name
