@@ -1,15 +1,12 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class DieCanvas : MonoBehaviour
 {
-    private Health health;
+    private PlayerDeath death;
     void Start()
     {
-        health = GameObject.FindGameObjectWithTag("Player").GetComponent<Health>();
-        health.OnDie += ActivateDieCanvas;
+        death = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDeath>();
+        death.OnDie += ActivateDieCanvas;
     }
 
     private void ActivateDieCanvas()
@@ -19,6 +16,6 @@ public class DieCanvas : MonoBehaviour
 
     private void OnDestroy()
     {
-        health.OnDie -= ActivateDieCanvas;
+        death.OnDie -= ActivateDieCanvas;
     }
 }

@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IDieable
 {
     [SerializeField] private bool IsShooting = true;
     [SerializeField] private float Damage;
@@ -34,11 +34,11 @@ public class Enemy : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Health>().RemoveHP(Damage);
-            DestroyEnemy();
+            Die();
         }
     }
 
-    private void DestroyEnemy()
+    public void Die()
     {
         Instantiate(Effects, transform.position, Quaternion.identity, transform.parent);
         Destroy(gameObject);
