@@ -21,11 +21,16 @@ public class Shop : MonoBehaviour
     private void Update()
     {
         moneyText.text = Money.LoadMoney().ToString();
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             Money.IncreaseMoney(100000);
         }
 
+        UpdateButtons();
+    }
+    private void UpdateButtons()
+    {
         for (int i = 0; i < shopItems.Length; i++)
         {
             if (shopItems[i].isBought)
@@ -35,32 +40,23 @@ public class Shop : MonoBehaviour
         }
     }
 
-    public void Next()
+    public void Switch(int direction)
     {
-        if (currentIndex + 1 >= shopItems.Length) return;
+        int newIndex = currentIndex + direction;
+
+        if (newIndex >= shopItems.Length || newIndex < 0) return;
 
         CloseAll();
 
-        shopItems[currentIndex + 1].gameObject.SetActive(true);
+        shopItems[newIndex].gameObject.SetActive(true);
 
-        if(!shopItems[currentIndex + 1].isBought) buttons[currentIndex + 1].gameObject.SetActive(true);
+        if (!shopItems[newIndex].isBought)
+            buttons[newIndex].gameObject.SetActive(true);
 
-        if (shopItems[currentIndex + 1].isBought) SavingTransport.SaveTransport(currentIndex + 1);
-        currentIndex += 1;    
-    }
+        if (shopItems[newIndex])
+            SavingTransport.SaveTransport(newIndex);
 
-    public void Previous()
-    {
-        if (currentIndex - 1 < 0) return;
-        CloseAll();
-
-        shopItems[currentIndex - 1].gameObject.SetActive(true);
-
-        if (!shopItems[currentIndex - 1].isBought) buttons[currentIndex - 1].gameObject.SetActive(true);
-
-        if (shopItems[currentIndex - 1].isBought) SavingTransport.SaveTransport(currentIndex - 1);
-
-        currentIndex -= 1;  
+        currentIndex += direction;
     }
 
     private void CloseAll()
