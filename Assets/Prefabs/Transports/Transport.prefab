@@ -140,6 +140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1671955297710490717}
+  - component: {fileID: 4576950698472453160}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -161,6 +162,22 @@ Transform:
   m_Father: {fileID: 8818462511464740258}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!111 &4576950698472453160
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4827039165732636758}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 0d7da5eb523478b43a6258b2309f335d, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 0d7da5eb523478b43a6258b2309f335d, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6140052118349384745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4925,7 +4942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0564e2f903329824f8705065b6ee5e6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TurretAnimation: {fileID: 0}
+  TurretAnimation: {fileID: 4576950698472453160}
   ShootingPoint: {fileID: 4298772737547715628}
   Bullet: {fileID: 5192495889844897908, guid: 1a20652841169424393657c58ce8a310, type: 3}
   Cooldown: 2
