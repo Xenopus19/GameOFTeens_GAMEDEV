@@ -26,8 +26,10 @@ public class Bullet : MonoBehaviour
 
         health.RemoveHP(Damage);
 
-        if (collision.gameObject.tag == "Player")
-            DestroyBullet();
+        if (collision.gameObject.GetComponent<Bullet>() != null)
+            Destroy(collision.gameObject);
+
+        DestroyBullet();
     }
 
     private void DestroyBullet()
