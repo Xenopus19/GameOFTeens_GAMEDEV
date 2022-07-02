@@ -4891,6 +4891,7 @@ GameObject:
   - component: {fileID: 3195573420576270026}
   - component: {fileID: 2628343803213047899}
   - component: {fileID: 2935295761217092635}
+  - component: {fileID: 8240061813956062263}
   m_Layer: 0
   m_Name: Transport
   m_TagString: Untagged
@@ -4946,6 +4947,20 @@ MonoBehaviour:
   ShootingPoint: {fileID: 4298772737547715628}
   Bullet: {fileID: 5192495889844897908, guid: 1a20652841169424393657c58ce8a310, type: 3}
   Cooldown: 2
+--- !u!114 &8240061813956062263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7138972651446333881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50b684e7c90dcc644915576c7cccce97, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentHP: 0
+  maxHP: 100
 --- !u!1 &8376023797427188837
 GameObject:
   m_ObjectHideFlags: 0
