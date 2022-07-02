@@ -22,11 +22,6 @@ public class Shop : MonoBehaviour
     {
         moneyText.text = Money.LoadMoney().ToString();
 
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Money.IncreaseMoney(100000);
-        }
-
         UpdateButtons();
     }
     private void UpdateButtons()
