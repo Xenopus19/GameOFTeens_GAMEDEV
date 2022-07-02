@@ -12,7 +12,6 @@ public class FinishCanvas : MonoBehaviour
 
     private IEnumerator InitStars()
     {
-        Debug.Log("Stars activated");
         int score = Score.Instance.score;
         float scoreForStar = Level.levelBoxes / 2 * BoxScript.scoreAddAmount;
         if (score < scoreForStar) 

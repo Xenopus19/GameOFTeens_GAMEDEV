@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private bool IsShooting = true;
     [SerializeField] private float Damage;
     [SerializeField] private float SeconsToShoot;
     [SerializeField] private GameObject Effects;
@@ -15,7 +16,9 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         shooting = GetComponent<Shooting>();
-        StartCoroutine(Shoot());
+
+        if(IsShooting)
+            StartCoroutine(Shoot());
     }
 
     private IEnumerator Shoot()
@@ -27,6 +30,7 @@ public class Enemy : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("Touched");
         if (collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<Health>().RemoveHP(Damage);
