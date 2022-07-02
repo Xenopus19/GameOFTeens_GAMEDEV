@@ -75,7 +75,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: van_1_black
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6352616002136992154, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b2788c42126f14248ab2fdd78705c4d0, type: 3}
 --- !u!1001 &5473662653216942803
 PrefabInstance:

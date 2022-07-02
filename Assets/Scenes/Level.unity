@@ -1529,6 +1529,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3218464956416308013, guid: 16834764bc41b84478cc9a9ffc5cc711, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7196756629641208926, guid: 16834764bc41b84478cc9a9ffc5cc711, type: 3}
       propertyPath: m_RootOrder
       value: 1
