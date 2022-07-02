@@ -537,6 +537,7 @@ MonoBehaviour:
   ChanceToSpawnObject: 10
   OnTileObjects:
   - {fileID: 9099283687033397513, guid: 4268762c614e33b44b816043f88942c8, type: 3}
+  - {fileID: 1778400288014538885, guid: 3f007cfd31861824aab4d406c874188c, type: 3}
   BorderDecorations:
   - {fileID: 2492282437947544614, guid: 2f27bf2cfadc6cf45997d1ae68bc75a7, type: 3}
   - {fileID: 7878229952155753812, guid: bcd415e6ba613ff449b9d0ed03b6ad4c, type: 3}
