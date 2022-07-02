@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int Damage;
+    [SerializeField] private float Damage;
     [SerializeField] private float SeconsToShoot;
 
     private Shooting shooting;
