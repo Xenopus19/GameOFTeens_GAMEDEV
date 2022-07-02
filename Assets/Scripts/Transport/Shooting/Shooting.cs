@@ -10,6 +10,8 @@ public class Shooting : MonoBehaviour
     [SerializeField] private GameObject Bullet;
     [SerializeField] private float Cooldown;
 
+    [SerializeField] private bool IsPlayer;
+
     private float PassedCooldown = 0;
 
     private void Update()
@@ -21,17 +23,19 @@ public class Shooting : MonoBehaviour
     {
         PassedCooldown += Time.deltaTime;
 
-        if(PassedCooldown >= Cooldown && Input.GetKeyDown(KeyCode.Space))
+        if(PassedCooldown >= Cooldown && Input.GetKeyDown(KeyCode.Space) && IsPlayer)
         {
             Shoot();
         }
     }
 
-    private void Shoot()
+    public void Shoot()
     {
         PassedCooldown = 0;
 
         TurretAnimation.Play();
-        Instantiate(Bullet, ShootingPoint.position, Quaternion.Inverse(ShootingPoint.rotation));
+        GameObject bullet = Instantiate(Bullet, ShootingPoint.position, Quaternion.Inverse(ShootingPoint.rotation));
+        if (!IsPlayer)
+            bullet.GetComponent<Bullet>().Speed *= 2;
     }
 }
