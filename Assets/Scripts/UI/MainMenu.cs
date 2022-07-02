@@ -9,8 +9,31 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private GameObject toggleIcon;
     [SerializeField] private Sprite defaultSprite;
     [SerializeField] private Sprite pressedSprite;
-    private bool isOn = true;
+    private bool isOn;
     [SerializeField] private Animator animator;
+
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("Sound"))
+        {
+            if (PlayerPrefs.GetInt("Sound") == 0)
+            {
+                isOn = true;
+            }
+            else if (PlayerPrefs.GetInt("Sound") == 1)
+            {
+                isOn = false;
+            }
+        }
+        else
+        {
+            isOn = true;
+        }
+
+        mixer.SetFloat("Volume", isOn ? 0f : -80f);
+        toggleIcon.GetComponent<Image>().sprite = isOn ? defaultSprite : pressedSprite;
+        PlayerPrefs.SetInt("Sound", isOn ? 0 : 1);
+    }
 
     public void Play()
     {
@@ -36,8 +59,9 @@ public class MainMenu : MonoBehaviour
     public void ToggleSound()
     {
         isOn = !isOn;
-        mixer.SetFloat("Volume", isOn ? 10f : -80f);
+        mixer.SetFloat("Volume", isOn ? 0f : -80f);
         toggleIcon.GetComponent<Image>().sprite = isOn ? defaultSprite : pressedSprite;
+        PlayerPrefs.SetInt("Sound", isOn ? 0 : 1);
     }
 
     public void Quit()
