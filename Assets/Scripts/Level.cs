@@ -3,37 +3,26 @@ using UnityEngine;
 
 public class Level 
 {
-    public static float levelBoxes;
-
     public static int level;
-    private static float allBoxes;
+    public static float levelTime;
+    public static float time;
 
-    public static Action<float> OnBoxAmountChanged;
     public static Action OnLevelFinished;
 
     public static void LoadLevel()
     {
         level = PlayerPrefs.HasKey("Level") ? PlayerPrefs.GetInt("Level") : 1;
-        allBoxes = 0;
-        SetBoxesAmount();
+        time = 0;
+        levelTime = level * 20;
     }
 
-    private static void SetBoxesAmount()
+    public static bool IsEndGame()
     {
-        levelBoxes = level * 10;
+        return time >= levelTime;
     }
 
-    public static void IncreaseAllBoxAmount(GameObject box)
+    public static void SaveLevel()
     {
-        if (box.GetComponent<BoxScript>() != null)
-        {
-            allBoxes++;
-            OnBoxAmountChanged?.Invoke(allBoxes / levelBoxes);
-        }
-    }
-
-    internal static bool IsEndGame()
-    {
-        return allBoxes == levelBoxes;
+        PlayerPrefs.SetInt("Level", level + 1);
     }
 }

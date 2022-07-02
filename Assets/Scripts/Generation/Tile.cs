@@ -52,7 +52,6 @@ public class Tile : MonoBehaviour
             if(NeedSpawnObject())
             {
                 GameObject objectToSpawn = OnTileObjects[Random.Range(0, OnTileObjects.Length)];
-                Level.IncreaseAllBoxAmount(objectToSpawn);
                 Instantiate(objectToSpawn, joint);
             }
         }
