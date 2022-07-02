@@ -34,7 +34,7 @@ public class Shooting : MonoBehaviour
     {
         PassedCooldown = 0;
 
-        //TurretShootingSound.Play();
+        TurretShootingSound.Play();
         TurretAnimation.Play();
         Bullet bullet = Instantiate(Bullet, ShootingPoint.position,
                                     Quaternion.Inverse(ShootingPoint.rotation)).GetComponent<Bullet>();

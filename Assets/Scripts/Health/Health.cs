@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Health : MonoBehaviour
 {
+    public AudioSource GotDamageAudio;
     public float currentHP;
     public float maxHP;
 
@@ -26,12 +27,13 @@ public class Health : MonoBehaviour
     public void RemoveHP(float amount)
     {
         currentHP -= amount;
+        if(GotDamageAudio != null) GotDamageAudio.Play();
         UpdateHP();
         //if (currentHP <= 0) ;
     }
 
     private void UpdateHP()
-    {
+    { 
         OnHPChanged?.Invoke(currentHP / maxHP);
     }
 }
