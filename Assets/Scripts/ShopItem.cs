@@ -5,16 +5,26 @@ using UnityEngine;
 public class ShopItem : MonoBehaviour
 {
     [SerializeField] private int price;
+    [SerializeField] private int number;
+    private int money;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        money = Money.LoadMoney();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void TryBuy()
     {
-        
+        if (money >= price)
+        {
+            Buy();
+        }
+    }
+
+    private void Buy()
+    {
+        Money.SpentMoney(price);
+        SavingTransport.SaveTransport(number);
+        Debug.Log(PlayerPrefs.GetInt("Transport"));
     }
 }
