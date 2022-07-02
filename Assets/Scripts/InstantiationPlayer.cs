@@ -11,6 +11,6 @@ public class InstantiationPlayer : MonoBehaviour
 
     private void InstantiatePlayer()
     {
-        Instantiate(TransportPrefabs[SavingTransport.TransportIndex], gameObject.transform, false);
+        Instantiate(TransportPrefabs[SavingTransport.TransportIndex], transform, false);
     }
 }
