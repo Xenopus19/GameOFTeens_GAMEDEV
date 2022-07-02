@@ -1062,7 +1062,7 @@ MonoBehaviour:
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
+    m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -1075,7 +1075,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 397846263}
   m_FillRect: {fileID: 1592284739}
   m_HandleRect: {fileID: 397846262}
@@ -1326,9 +1326,10 @@ MonoBehaviour:
   TransportPrefabs:
   - {fileID: 3218464956416308013, guid: 16834764bc41b84478cc9a9ffc5cc711, type: 3}
   - {fileID: 7988444577745016997, guid: 162041428ffe22d4fa2863b1f129f7db, type: 3}
-  - {fileID: 6612866360412619223, guid: f19a23ee80d834f4888e83e16ce2d76e, type: 3}
+  - {fileID: 2946729524147952490, guid: f19a23ee80d834f4888e83e16ce2d76e, type: 3}
   - {fileID: 4642966825118391537, guid: 5349f644e107f1545a15cece991ead38, type: 3}
-  - {fileID: 2946729524147952490, guid: 7c93a0c2b61c48d4286ec3821ca75c56, type: 3}
+  - {fileID: 6612866360412619223, guid: 7c93a0c2b61c48d4286ec3821ca75c56, type: 3}
+  PlayerHpUI: {fileID: 0}
 --- !u!1 &1198795349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 772647860768838190, guid: c47581e85c6d41647b54b0936c1003e0, type: 3}
@@ -2227,7 +2228,7 @@ MonoBehaviour:
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
+    m_ColorMultiplier: 5
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
@@ -2240,7 +2241,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 489903070}
   m_FillRect: {fileID: 1814453910}
   m_HandleRect: {fileID: 489903069}

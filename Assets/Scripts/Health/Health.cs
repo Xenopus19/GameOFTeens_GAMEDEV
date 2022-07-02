@@ -6,33 +6,27 @@ public class Health : MonoBehaviour
 {
     public int currentHP;
     public int maxHP;
-    [SerializeField] private GameObject thisHealthUI;
+    public GameObject thisHealthUI;
     private HealthUI UI;
 
     private void Start()
     {
         currentHP = maxHP;
-        UI = UI.GetComponent<HealthUI>();
-        UpdateUIHP();
-        UI.maxHP = maxHP;
+        UI = thisHealthUI.GetComponent<HealthUI>();
+        UI.UpdateNumbers(currentHP, maxHP);
     }
 
     public void AddHP(int amount)
     {
         currentHP += amount;
         if (currentHP > maxHP) currentHP = maxHP;
-        UpdateUIHP();
+        UI.UpdateNumbers(currentHP, maxHP);
     }
 
     public void RemoveHP(int amount)
     {
         currentHP -= amount;
-        UpdateUIHP();
+        UI.UpdateNumbers(currentHP, maxHP);
         //if (currentHP <= 0) ;
-    }
-
-    private void UpdateUIHP()
-    {
-        UI.currentHP = currentHP;
     }
 }

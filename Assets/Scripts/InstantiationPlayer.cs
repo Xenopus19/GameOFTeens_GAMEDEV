@@ -3,6 +3,7 @@ using UnityEngine;
 public class InstantiationPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject[] TransportPrefabs;
+    [SerializeField] private GameObject PlayerHpUI;
 
     void Awake()
     {
@@ -11,6 +12,7 @@ public class InstantiationPlayer : MonoBehaviour
 
     private void InstantiatePlayer()
     {
-        Instantiate(TransportPrefabs[SavingTransport.TransportIndex], transform, false);
+        GameObject transport = Instantiate(TransportPrefabs[SavingTransport.TransportIndex], transform, false);
+        transport.GetComponent<Health>().thisHealthUI = PlayerHpUI;
     }
 }
