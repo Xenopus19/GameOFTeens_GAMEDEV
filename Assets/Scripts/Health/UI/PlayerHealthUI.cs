@@ -10,17 +10,17 @@ public class PlayerHealthUI : HealthUI
     void Start()
     {
         bar = GetComponent<Slider>();
-        Level.OnBoxAmountChanged += UpdateProgress;
+        Health.OnHPChanged += UpdateProgress;
         UpdateProgress(1);
-    }
-
-    private void Update()
-    {
-        UpdateProgress(currentHP / maxHP);
     }
 
     private void UpdateProgress(float filled)
     {
         bar.value = (filled);
+    }
+
+    private void OnDestroy()
+    {
+        Health.OnHPChanged -= UpdateProgress;
     }
 }
