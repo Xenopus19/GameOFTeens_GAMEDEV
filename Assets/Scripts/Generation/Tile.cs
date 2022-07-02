@@ -18,11 +18,16 @@ public class Tile : MonoBehaviour
     {
         AddOnTileObjects();
         AddBorderDecorations();
+        Level.OnLevelFinished += StopTiles;
+    }
+    private void StopTiles()
+    {
+        Speed = 0;
     }
 
     private void Update()
     {
-        transform.position += new Vector3(0, 0, Speed * Time.deltaTime);
+        transform.position += new Vector3(0, 0, Speed * Time.deltaTime );
 
         if(transform.position.z >= MaxZPos)
             Destroy(gameObject);
@@ -56,5 +61,10 @@ public class Tile : MonoBehaviour
     private bool NeedSpawnObject()
     {
         return Random.Range(0, 100) <= ChanceToSpawnObject;
+    }
+
+    private void OnDestroy()
+    {
+        Level.OnLevelFinished -= StopTiles;
     }
 }

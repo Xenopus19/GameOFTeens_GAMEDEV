@@ -8,6 +8,7 @@ public class RoadCreator : MonoBehaviour
     [SerializeField] private Transform SpawnPos;
 
     [SerializeField] private GameObject Tile;
+    [SerializeField] private GameObject FinishTile;
 
     [SerializeField] private Transform tilesParent;
 
@@ -35,7 +36,7 @@ public class RoadCreator : MonoBehaviour
 
     private void EndGame()
     {
-       // throw new NotImplementedException();
+        Tile = FinishTile;
     }
 
     private void SpawnTile()
