@@ -4,7 +4,7 @@ public class InstantiationPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject[] TransportPrefabs;
 
-    private void Start()
+    private void Awake()
     {
         InstantiatePlayer();
     }

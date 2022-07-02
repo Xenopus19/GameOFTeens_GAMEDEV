@@ -9,6 +9,7 @@ public class DeathCanvas : MonoBehaviour
 
     void Start()
     {
+        print(GameObject.FindGameObjectWithTag("Player"));
         death = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerDeath>();
         death.OnDie += ActivateDieCanvas;
     }
