@@ -4,15 +4,34 @@ using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] Animation TurretAnimation;
+
+    [SerializeField] Transform ShootingPoint;
+    [SerializeField] private GameObject Bullet;
+    [SerializeField] private float Cooldown;
+
+    private float PassedCooldown = 0;
+
+    private void Update()
     {
-        
+        CheckShooting();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void CheckShooting()
     {
-        
+        PassedCooldown += Time.deltaTime;
+
+        if(PassedCooldown >= Cooldown && Input.GetKeyDown(KeyCode.Space))
+        {
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        PassedCooldown = 0;
+
+        TurretAnimation.Play();
+        Instantiate(Bullet, ShootingPoint.position, Quaternion.Inverse(ShootingPoint.rotation));
     }
 }
