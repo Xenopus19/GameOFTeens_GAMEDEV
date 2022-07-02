@@ -4,13 +4,13 @@ public class InstantiationPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject[] TransportPrefabs;
 
-    void Awake()
+    private void Start()
     {
         InstantiatePlayer();
     }
 
     private void InstantiatePlayer()
     {
-        Instantiate(TransportPrefabs[SavingTransport.TransportIndex], transform, false);
+        Instantiate(TransportPrefabs[PlayerPrefs.GetInt("Transport")], transform, false);
     }
 }
