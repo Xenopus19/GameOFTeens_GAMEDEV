@@ -349,7 +349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6054431794503107269, guid: 8784cee67cb5a1245bc4e15c7df8d321, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 6109658349546999514, guid: 8784cee67cb5a1245bc4e15c7df8d321, type: 3}
       propertyPath: m_IsActive
