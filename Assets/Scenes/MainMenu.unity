@@ -4295,7 +4295,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: UKRANIAN HELPER
+  m_Text: UKRAINIAN HELPER
 --- !u!222 &1509485636
 CanvasRenderer:
   m_ObjectHideFlags: 0
