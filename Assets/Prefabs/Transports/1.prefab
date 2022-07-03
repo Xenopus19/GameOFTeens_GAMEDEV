@@ -265,10 +265,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7486309226063250452, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0b5d1a66ad104ef408da1522f3e013f3, type: 2}
     - target: {fileID: 8240061813956062263, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
       propertyPath: maxHP
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 8277610665562410466, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 24300002, guid: 0b5d1a66ad104ef408da1522f3e013f3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 756c5044c76aa2446bf0ab5d09dad30a, type: 3}
 --- !u!4 &3880284220046128950 stripped
