@@ -2015,6 +2015,7 @@ GameObject:
   - component: {fileID: 994817201}
   - component: {fileID: 994817203}
   - component: {fileID: 994817202}
+  - component: {fileID: 994817204}
   m_Layer: 5
   m_Name: ProgressBarNew
   m_TagString: Untagged
@@ -2036,11 +2037,11 @@ RectTransform:
   - {fileID: 759445586}
   - {fileID: 333089897}
   - {fileID: 677402019}
-  m_Father: {fileID: 1410188166}
-  m_RootOrder: 1
+  m_Father: {fileID: 2044482099}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.7, y: 0.9}
-  m_AnchorMax: {x: 0.97, y: 0.95}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2107,6 +2108,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &994817204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994817200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 3
+  m_AspectRatio: 8.779462
 --- !u!1001 &1044061322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2916,8 +2931,8 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1410188166}
-  - {fileID: 442426078}
   - {fileID: 1884705458}
+  - {fileID: 442426078}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2998,6 +3013,42 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 41, y: 2, z: 39}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!1 &1402329029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1402329030}
+  m_Layer: 0
+  m_Name: HealthBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1402329030
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1402329029}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1753199700}
+  m_Father: {fileID: 1410188166}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.03, y: 0.9}
+  m_AnchorMax: {x: 0.3, y: 0.95}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &1410161000
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3140,8 +3191,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 670473397}
-  - {fileID: 994817201}
-  - {fileID: 1753199700}
+  - {fileID: 2044482099}
+  - {fileID: 1402329030}
   - {fileID: 614106420}
   - {fileID: 1182458396}
   m_Father: {fileID: 1291458724}
@@ -3626,6 +3677,7 @@ GameObject:
   - component: {fileID: 1753199700}
   - component: {fileID: 1753199702}
   - component: {fileID: 1753199701}
+  - component: {fileID: 1753199703}
   m_Layer: 5
   m_Name: HPBar
   m_TagString: Untagged
@@ -3647,11 +3699,11 @@ RectTransform:
   - {fileID: 1836949021}
   - {fileID: 983092941}
   - {fileID: 1130956401}
-  m_Father: {fileID: 1410188166}
-  m_RootOrder: 2
+  m_Father: {fileID: 1402329030}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.03, y: 0.9}
-  m_AnchorMax: {x: 0.3, y: 0.95}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -3720,6 +3772,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1753199703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1753199699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86710e43de46f6f4bac7c8e50813a599, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AspectMode: 3
+  m_AspectRatio: 8.779463
 --- !u!1 &1814453909
 GameObject:
   m_ObjectHideFlags: 0
@@ -3902,7 +3968,7 @@ RectTransform:
   - {fileID: 144151317}
   - {fileID: 2055979913}
   m_Father: {fileID: 1291458724}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3952,6 +4018,42 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 60946374784719981, guid: 4ffea058cee92e24f9ca5ffaf1457279, type: 3}
   m_PrefabInstance: {fileID: 2099033439}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2044482098
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2044482099}
+  m_Layer: 0
+  m_Name: ProgressBar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2044482099
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044482098}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 994817201}
+  m_Father: {fileID: 1410188166}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.6, y: 0.9}
+  m_AnchorMax: {x: 0.97, y: 0.95}
+  m_AnchoredPosition: {x: 40, y: 0}
+  m_SizeDelta: {x: -80, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2055979912
 GameObject:
   m_ObjectHideFlags: 0
