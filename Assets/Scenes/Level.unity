@@ -576,7 +576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 828556723205947613, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 828556723205947613, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_AnchorMax.x
@@ -600,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 828556723205947613, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -0.0038146973
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 828556723205947613, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_LocalPosition.x
@@ -636,7 +636,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 828556723205947613, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00048828125
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 828556723205947613, guid: e622101ce1160f44f91fb2515a01f932, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1716,8 +1716,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1061860661}
+  m_Children: []
   m_Father: {fileID: 1182458396}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2201,7 +2200,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 857069593}
+    m_TransformParent: {fileID: 1291458724}
     m_Modifications:
     - target: {fileID: 512843053478492525, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: m_LocalScale.x
@@ -2231,6 +2230,10 @@ PrefabInstance:
       propertyPath: m_FontData.m_Font
       value: 
       objectReference: {fileID: 12800000, guid: 0dbe2c7f3b06b1e43bd3ee92545146f1, type: 3}
+    - target: {fileID: 3557662798733165461, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4569815661585118923, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: OutputAudioMixerGroup
       value: 
@@ -2325,15 +2328,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9014706438118515400, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9014706438118515400, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 640
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9014706438118515400, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 240
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9014706438118515400, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: m_LocalRotation.x
@@ -2349,7 +2352,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9014706438118515400, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -320.00003
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9014706438118515400, guid: 59496f59f2efac74e8cb29efdff88818, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2931,6 +2934,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1410188166}
+  - {fileID: 1061860661}
   - {fileID: 1884705458}
   - {fileID: 442426078}
   m_Father: {fileID: 0}
@@ -3968,7 +3972,7 @@ RectTransform:
   - {fileID: 144151317}
   - {fileID: 2055979913}
   m_Father: {fileID: 1291458724}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

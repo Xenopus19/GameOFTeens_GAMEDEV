@@ -14,6 +14,14 @@ public class Shooting : MonoBehaviour
     [SerializeField] private bool IsPlayer;
 
     private float PassedCooldown = 0;
+    private bool IsEndGame;
+
+    private void Start()
+    {
+        IsEndGame = false;
+        Level.OnLevelFinished += EndShooting;
+    }
+
 
     private void Update()
     {
@@ -24,7 +32,7 @@ public class Shooting : MonoBehaviour
     {
         PassedCooldown += Time.deltaTime;
 
-        if(PassedCooldown >= Cooldown && IsPlayer)
+        if(PassedCooldown >= Cooldown && IsPlayer && !IsEndGame)
         {
             Shoot();
         }
@@ -41,5 +49,15 @@ public class Shooting : MonoBehaviour
         if (!IsPlayer)
             bullet.Speed *= 2;
         bullet.Shooter = gameObject;
+    }
+
+    private void EndShooting()
+    {
+        IsEndGame = true;
+    }
+
+    private void OnDestroy()
+    {
+        Level.OnLevelFinished -= EndShooting;
     }
 }
