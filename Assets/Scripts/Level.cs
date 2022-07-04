@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Level 
 {
@@ -20,7 +21,7 @@ public class Level
 
     public static bool IsEndGame()
     {
-        return time >= levelTime;
+        return time >= levelTime && SceneManager.GetActiveScene().name == "Level";
     }
 
     public static void SaveLevel()
