@@ -5046,7 +5046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c41ef8147783dcf478970d24c8e81bc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MovementSpeed: 1
+  m_MovementSpeed: 30
   m_BordersX: {x: -16, y: 16}
   CameraFinishAnimation: {fileID: 4559217803481618422}
   JiggleAnimation: {fileID: 2805574704571527900}

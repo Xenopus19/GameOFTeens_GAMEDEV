@@ -24,7 +24,7 @@ public class Shooting : MonoBehaviour
     {
         PassedCooldown += Time.deltaTime;
 
-        if(PassedCooldown >= Cooldown && Input.GetKeyDown(KeyCode.Space) && IsPlayer)
+        if(PassedCooldown >= Cooldown && IsPlayer)
         {
             Shoot();
         }

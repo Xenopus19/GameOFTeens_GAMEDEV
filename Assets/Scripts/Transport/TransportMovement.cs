@@ -8,6 +8,8 @@ public class TransportMovement : MonoBehaviour
     [SerializeField] private Animation CameraFinishAnimation;
     [SerializeField] private Animation JiggleAnimation;
 
+    private Vector3 Direction;
+
     private bool ControlsFreezed;
 
     private void Start()
@@ -26,21 +28,16 @@ public class TransportMovement : MonoBehaviour
 
     private void Drive()
     {
-        Vector3 direction = CalculateDirection();
-        if ((direction.x >= 0 && transform.position.x <= m_BordersX.x) ||
-            (direction.x <= 0 && transform.position.x >= m_BordersX.y))
+        if ((Direction.x >= 0 && transform.position.x <= m_BordersX.x) ||
+            (Direction.x <= 0 && transform.position.x >= m_BordersX.y))
             return;
 
-        transform.Translate(direction * m_MovementSpeed * Time.deltaTime);
+        transform.Translate(Direction * m_MovementSpeed * Time.deltaTime);
     }
 
-    private Vector3 CalculateDirection()
+    public void SetDirection(Vector3 direction)
     {
-        Vector3 mousePos2D = Input.mousePosition;
-        mousePos2D.z = -Camera.main.transform.position.z;
-        Vector3 mousePos3D = Camera.main.ScreenToWorldPoint(mousePos2D);
-        
-        return new Vector3(mousePos3D.x - transform.position.x, 0, 0);
+        Direction = direction;
     }
 
     private void FreezeControlsMoveCamera()
